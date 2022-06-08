@@ -14,7 +14,7 @@ EQ            = =
 
 CC            = gcc
 CXX           = g++
-DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
+DEFINES       = -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -O2 -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -O2 -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)
 INCPATH       = -I. -I. -I../../../5.14.2/gcc_64/include -I../../../5.14.2/gcc_64/include/QtWidgets -I../../../5.14.2/gcc_64/include/QtGui -I../../../5.14.2/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I../../../5.14.2/gcc_64/mkspecs/linux-g++
