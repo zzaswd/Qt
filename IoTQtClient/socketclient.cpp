@@ -5,8 +5,8 @@
 SocketClient::SocketClient(QWidget *parent, Qt::WindowFlags flags)
 	: QWidget(parent, flags)
 {
-    bool ok;
-	pQTcpSocket = new QTcpSocket();
+//    bool ok;
+    pQTcpSocket = new QTcpSocket(); // Qt에서 제공해주는 Socket class.
 
 	connect(pQTcpSocket, SIGNAL(connected()), this, SLOT(slotConnectServer()));
 	connect(pQTcpSocket, SIGNAL(disconnected()), this, SLOT(slotClosedByServer()));
@@ -65,9 +65,9 @@ void SocketClient::slotSocketError()
 void SocketClient::slotSocketSendData(QString strSendData)
 {	
     if(!strSendData.isEmpty()) {
-        strSendData = strSendData+"\n";
+        strSendData = strSendData+"\n"; // 붙여보내줘야 함.
         QByteArray bCmd = strSendData.toLocal8Bit();
-//        qDebug() << bCmd;
+        qDebug() << bCmd;
         pQTcpSocket->write(bCmd);
     }
 }

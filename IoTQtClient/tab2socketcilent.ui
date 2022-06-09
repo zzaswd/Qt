@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>734</width>
-    <height>634</height>
+    <width>541</width>
+    <height>344</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -52,13 +52,13 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="2,6,2">
      <item>
-      <widget class="QLineEdit" name="lineEdit"/>
+      <widget class="QLineEdit" name="pLERecvId"/>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_2"/>
+      <widget class="QLineEdit" name="pLESendData"/>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="pPBSendButton">
        <property name="text">
         <string>송신</string>
        </property>

@@ -19,18 +19,27 @@ SOURCES += \
     main.cpp \
     mainwidget.cpp \
     socketclient.cpp \
-    tab2socketcilent.cpp
+    tab2socketcilent.cpp \
+    tab3controlpannel.cpp \
+    tab4sensordisplay.cpp
 
 HEADERS += \
     mainwidget.h \
     socketclient.h \
-    tab2socketcilent.h
+    tab2socketcilent.h \
+    tab3controlpannel.h \
+    tab4sensordisplay.h
 
 FORMS += \
     mainwidget.ui \
-    tab2socketcilent.ui
+    tab2socketcilent.ui \
+    tab3controlpannel.ui \
+    tab4sensordisplay.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    IoTQtClient.qrc

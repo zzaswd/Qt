@@ -278,7 +278,8 @@ Makefile: ../IoTQtClient/IoTQtClient.pro ../../Qt/Qt5.14.2/5.14.2/mingw73_64/mks
 		../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Network.prl \
 		../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Core.prl \
 		../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/qtmain.prl \
-		../../Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/build_pass.prf
+		../../Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/build_pass.prf \
+		../IoTQtClient/IoTQtClient.qrc
 	$(QMAKE) -o Makefile ..\IoTQtClient\IoTQtClient.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 ../../Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/spec_pre.prf:
 ../../Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/qdevice.pri:
@@ -489,6 +490,7 @@ Makefile: ../IoTQtClient/IoTQtClient.pro ../../Qt/Qt5.14.2/5.14.2/mingw73_64/mks
 ../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Core.prl:
 ../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/qtmain.prl:
 ../../Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/build_pass.prf:
+../IoTQtClient/IoTQtClient.qrc:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\IoTQtClient\IoTQtClient.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
 

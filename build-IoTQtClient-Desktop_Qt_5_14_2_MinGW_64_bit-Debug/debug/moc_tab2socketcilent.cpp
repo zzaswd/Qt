@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Tab2SocketCilent_t {
-    QByteArrayData data[5];
-    char stringdata0[73];
+    QByteArrayData data[9];
+    char stringdata0[144];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,12 +35,18 @@ static const qt_meta_stringdata_Tab2SocketCilent_t qt_meta_stringdata_Tab2Socket
 QT_MOC_LITERAL(0, 0, 16), // "Tab2SocketCilent"
 QT_MOC_LITERAL(1, 17, 13), // "sigSocketRecv"
 QT_MOC_LITERAL(2, 31, 0), // ""
-QT_MOC_LITERAL(3, 32, 19), // "slotConnectToServer"
-QT_MOC_LITERAL(4, 52, 20) // "slotSocketRecvUpdate"
+QT_MOC_LITERAL(3, 32, 15), // "sigTab3RecvData"
+QT_MOC_LITERAL(4, 48, 15), // "sigTab4RecvData"
+QT_MOC_LITERAL(5, 64, 19), // "slotConnectToServer"
+QT_MOC_LITERAL(6, 84, 20), // "slotSocketRecvUpdate"
+QT_MOC_LITERAL(7, 105, 18), // "slotSocketSendData"
+QT_MOC_LITERAL(8, 124, 19) // "slotSocketDataClear"
 
     },
     "Tab2SocketCilent\0sigSocketRecv\0\0"
-    "slotConnectToServer\0slotSocketRecvUpdate"
+    "sigTab3RecvData\0sigTab4RecvData\0"
+    "slotConnectToServer\0slotSocketRecvUpdate\0"
+    "slotSocketSendData\0slotSocketDataClear"
 };
 #undef QT_MOC_LITERAL
 
@@ -50,26 +56,36 @@ static const uint qt_meta_data_Tab2SocketCilent[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       1,       // signalCount
+       3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   29,    2, 0x06 /* Public */,
+       1,    1,   54,    2, 0x06 /* Public */,
+       3,    1,   57,    2, 0x06 /* Public */,
+       4,    1,   60,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       3,    1,   32,    2, 0x08 /* Private */,
-       4,    1,   35,    2, 0x08 /* Private */,
+       5,    1,   63,    2, 0x08 /* Private */,
+       6,    1,   66,    2, 0x08 /* Private */,
+       7,    0,   69,    2, 0x08 /* Private */,
+       7,    1,   70,    2, 0x08 /* Private */,
+       8,    0,   73,    2, 0x08 /* Private */,
 
  // signals: parameters
+    QMetaType::Void, QMetaType::QString,    2,
+    QMetaType::Void, QMetaType::QString,    2,
     QMetaType::Void, QMetaType::QString,    2,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void, QMetaType::QString,    2,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,    2,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -81,8 +97,13 @@ void Tab2SocketCilent::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->sigSocketRecv((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 1: _t->slotConnectToServer((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 2: _t->slotSocketRecvUpdate((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 1: _t->sigTab3RecvData((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 2: _t->sigTab4RecvData((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 3: _t->slotConnectToServer((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 4: _t->slotSocketRecvUpdate((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 5: _t->slotSocketSendData(); break;
+        case 6: _t->slotSocketSendData((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 7: _t->slotSocketDataClear(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -91,6 +112,20 @@ void Tab2SocketCilent::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
             using _t = void (Tab2SocketCilent::*)(QString );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&Tab2SocketCilent::sigSocketRecv)) {
                 *result = 0;
+                return;
+            }
+        }
+        {
+            using _t = void (Tab2SocketCilent::*)(QString );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&Tab2SocketCilent::sigTab3RecvData)) {
+                *result = 1;
+                return;
+            }
+        }
+        {
+            using _t = void (Tab2SocketCilent::*)(QString );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&Tab2SocketCilent::sigTab4RecvData)) {
+                *result = 2;
                 return;
             }
         }
@@ -126,13 +161,13 @@ int Tab2SocketCilent::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 8)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 3;
+        _id -= 8;
     }
     return _id;
 }
@@ -142,6 +177,20 @@ void Tab2SocketCilent::sigSocketRecv(QString _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
+}
+
+// SIGNAL 1
+void Tab2SocketCilent::sigTab3RecvData(QString _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 1, _a);
+}
+
+// SIGNAL 2
+void Tab2SocketCilent::sigTab4RecvData(QString _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 2, _a);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE
