@@ -34,7 +34,7 @@ public:
     {
         if (Tab3ControlPannel->objectName().isEmpty())
             Tab3ControlPannel->setObjectName(QString::fromUtf8("Tab3ControlPannel"));
-        Tab3ControlPannel->resize(558, 325);
+        Tab3ControlPannel->resize(535, 328);
         gridLayout = new QGridLayout(Tab3ControlPannel);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         scrollArea = new QScrollArea(Tab3ControlPannel);
@@ -42,7 +42,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 538, 305));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 515, 308));
         label = new QLabel(scrollAreaWidgetContents);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(-20, -40, 541, 344));

@@ -53,6 +53,8 @@ void Tab2SocketCilent::slotSocketRecvUpdate(QString strRecvData){
 
     if(strRecvData.indexOf("SENSOR")>=0){ // indexOf는 특정 문자열안에 찾는 문자열이 있으면 그 위치를, 없으면 -1을 반환한다.
         emit sigTab4RecvData(strRecvData);
+        emit sigTab5RecvData(strRecvData);
+        emit sigTab6RecvData(strRecvData);
         //qDebug()<<"debug1!!!";
     }
 

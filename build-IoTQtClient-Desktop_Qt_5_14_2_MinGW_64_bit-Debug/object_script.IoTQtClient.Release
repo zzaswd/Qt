@@ -4,9 +4,15 @@ release/socketclient.o
 release/tab2socketcilent.o
 release/tab3controlpannel.o
 release/tab4sensordisplay.o
+release/tab5chartplot.o
+release/tab6database.o
+release/tab7plotdatabase.o
 release/qrc_IoTQtClient.o
 release/moc_mainwidget.o
 release/moc_socketclient.o
 release/moc_tab2socketcilent.o
 release/moc_tab3controlpannel.o
 release/moc_tab4sensordisplay.o
+release/moc_tab5chartplot.o
+release/moc_tab6database.o
+release/moc_tab7plotdatabase.o

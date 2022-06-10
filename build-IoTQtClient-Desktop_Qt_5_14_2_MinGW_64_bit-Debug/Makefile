@@ -273,9 +273,11 @@ Makefile: ../IoTQtClient/IoTQtClient.pro ../../Qt/Qt5.14.2/5.14.2/mingw73_64/mks
 		../../Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/yacc.prf \
 		../../Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/lex.prf \
 		../IoTQtClient/IoTQtClient.pro \
+		../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Charts.prl \
 		../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Widgets.prl \
 		../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Gui.prl \
 		../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Network.prl \
+		../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Sql.prl \
 		../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Core.prl \
 		../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/qtmain.prl \
 		../../Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/build_pass.prf \
@@ -484,9 +486,11 @@ Makefile: ../IoTQtClient/IoTQtClient.pro ../../Qt/Qt5.14.2/5.14.2/mingw73_64/mks
 ../../Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/yacc.prf:
 ../../Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/lex.prf:
 ../IoTQtClient/IoTQtClient.pro:
+../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Charts.prl:
 ../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Widgets.prl:
 ../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Gui.prl:
 ../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Network.prl:
+../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Sql.prl:
 ../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/Qt5Core.prl:
 ../../Qt/Qt5.14.2/5.14.2/mingw73_64/lib/qtmain.prl:
 ../../Qt/Qt5.14.2/5.14.2/mingw73_64/mkspecs/features/build_pass.prf:

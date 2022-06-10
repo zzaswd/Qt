@@ -6,7 +6,7 @@ MainWidget::MainWidget(QWidget *parent)
     , ui(new Ui::MainWidget)
 {
     ui->setupUi(this); // ui 셋업
-    ui->tabWidget->setCurrentIndex(1); // 실행시 2pagae를 dafault. 기본적으로 마지막 tab이 선택된다.
+    ui->tabWidget->setCurrentIndex(4); // 실행시 2pagae를 dafault. 기본적으로 마지막 tab이 선택된다.
     pTab2SocketCilent = new Tab2SocketCilent(ui->pTab2); //tab2의 종속되는 Tab2 객체 포인터 변수 선언.
     ui->pTab2->setLayout(pTab2SocketCilent->layout()); // ui의 pTab2 layout에 포인터가 가리키는 객체의 Layout을 넣어준다.
 
@@ -16,11 +16,18 @@ MainWidget::MainWidget(QWidget *parent)
     pTab4SensorDisplay = new Tab4SensorDisplay(ui->pTab4);
     ui->pTab4->setLayout(pTab4SensorDisplay->layout());
 
+    pTab5ChartPlot = new Tab5ChartPlot(ui->pTab5);
+    ui->pTab5 ->setLayout(pTab5ChartPlot->layout());
+
+    pTab6Database = new Tab6Database(ui->pTab6);
+    ui->pTab6 ->setLayout(pTab6Database->layout());
 
     connect(pTab2SocketCilent,SIGNAL(sigTab3RecvData(QString)),pTab3ControlPannel,SLOT(slotTab3RecvData(QString)));
     connect(pTab3ControlPannel,SIGNAL(sigSocketSendData(QString)),pTab2SocketCilent,SLOT(slotSocketSendData(QString)));
 
     connect(pTab2SocketCilent,SIGNAL(sigTab4RecvData(QString)),pTab4SensorDisplay,SLOT(slotTab4RecvData(QString)));
+    connect(pTab2SocketCilent,SIGNAL(sigTab5RecvData(QString)),pTab5ChartPlot,SLOT(slotTab5RecvData(QString)));
+    connect(pTab2SocketCilent,SIGNAL(sigTab6RecvData(QString)),pTab6Database,SLOT(slotTab6RecvData(QString)));
 
 }
 
